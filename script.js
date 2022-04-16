@@ -32,12 +32,7 @@ function showError(error){
 	notification.Element.innerHTML=`<p> ${error.message} </p>`;
 }
 function getWeather(latitude,longitude) {
-	if (location.protocol === 'http:') {
-	let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
-}
-else{
-    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;	
-}
+	let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
 fetch(api).then(function(response){
 	let data = response.json();
 	return data;
