@@ -1,0 +1,44 @@
+body{
+	font-family: 'Oswald', sans-serif;
+	background:linear-gradient(to right,#bdc3c7,#5b80a4) 
+}
+.nav-bar{
+	padding: 10px;
+	background: linear-gradient(to right, #ff9966 30%, #ff99cc 100%);
+}
+.nav-text a{
+	color: white;
+	font-size: 1.5rem;
+}
+.weather-icon{
+	padding: 20px;
+}
+.weather-icon img{
+	width:150px;
+	height: 150px;
+	transition: 0.25s ease-in;
+}
+.main-container{
+	margin-left: 15%;
+	width: 70%;
+	padding: 10px;
+	margin-top: 5%;
+	border-radius: 57px;
+	background: linear-gradient(315deg, #ffcccc, #f0f0f0);
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	/*box-shadow:  -5px -5px 10px #cacaca,
+	             5px 5px 10px #f6f6f6;*/
+}
+.notification{
+	font-size: 20px;
+	color:red;
+}
+.temperature-description{
+	text-transform: capitalize;
+}
+.down-link{
+	text-decoration: none;
+	color: black;
+	font-size: 12px;
+	padding: 10px;
+}
