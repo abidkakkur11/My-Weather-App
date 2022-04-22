@@ -2,7 +2,22 @@ const iconElement = document.querySelector(".weather-icon");
 const tempElement = document.querySelector(".temperature-value p");
 const descElement = document.querySelector(".temperature-description p");
 const locationElement = document.querySelector(".location p");
+const humidityElement = document.querySelector(".humidity p");
 const notificationElement = document.querySelector(".notification");
+//const pressureElement = document.querySelector(".pressure p");
+const dateElement = document.querySelector(".date h3");
+
+var current=new Date();
+/*console.log(current);
+const year=current.getFullYear();
+var month=current.getMonth();
+month=month+1;
+const date=current.getDate();
+//var completeDate= date + "/"+ month +"/"+ year;*/
+var completeDate=current.toLocaleString();
+//console.log(completeDate);
+dateElement.innerHTML=completeDate;
+
 
 const weather = {};
 
@@ -12,7 +27,7 @@ weather.temperature = {
 
 const KELVIN = 273;
 const key = "c3426018e98dc7587cf82c683becffcb";
-
+//console.log(key);
 
 if('geolocation' in navigator){
     navigator.geolocation.getCurrentPosition(setPosition, showError);
@@ -37,7 +52,7 @@ function showError(error){
 
 
 function getWeather(latitude, longitude){
-    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
     fetch(api)
         .then(function(response){
@@ -49,10 +64,12 @@ function getWeather(latitude, longitude){
             weather.temperature.value = Math.floor(data.main.temp - KELVIN);
             weather.description = data.weather[0].description;
             weather.iconId = data.weather[0].icon;
-            console.log(data.weather[0]); 
+            //console.log(data.weather[0]); 
             weather.city = data.name;
             weather.country = data.sys.country;
-            console.log(weather.city);
+            weather.humidity = data.main.humidity;
+            //weather.pressure = data.main.pressure;
+            //console.log(weather.city);
         })
         .then(function(){
             displayWeather();
@@ -64,6 +81,8 @@ function displayWeather(){
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
+    humidityElement.innerHTML = `Humidity:${weather.humidity}`;
+    //pressureElement.innerHTML = `Pressure:${weather.pressure}`;
 }
 
 

@@ -1,6 +1,6 @@
 body{
 	font-family: 'Oswald', sans-serif;
-	background:linear-gradient(to right,#bdc3c7,#5b80a4) 
+	background:linear-gradient(to right,#bdc3c7,#5b80a4);
 }
 .nav-bar{
 	padding: 10px;
@@ -27,6 +27,7 @@ body{
 	margin-left: 15%;
 	width: 70%;
 	padding: 10px;
+	padding-bottom: 30px;
 	margin-top: 5%;
 	border-radius: 57px;
 	background: linear-gradient(315deg, #ffcccc, #f0f0f0);
@@ -46,4 +47,17 @@ body{
 	color: black;
 	font-size: 12px;
 	padding: 10px;
+}
+.date h3{
+	padding:10px;
+	color: #527a7a;
+}
+.weather-icon{
+	filter: drop-shadow(8px 5px 4px #a6a6a6);
+}
+.navbar-brand{
+	color:#ffff!important;
+}
+.navbar-brand:hover{
+	color:#ffbf00!important;
 }
