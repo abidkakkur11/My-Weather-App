@@ -6,6 +6,11 @@ body{
 	padding: 10px;
 	background: linear-gradient(to right, #ff9966 30%, #ff99cc 100%);
 }
+@media (min-width:961px){
+.nav-bar{
+	background: white;
+}	
+}
 .nav-text a{
 	color: white;
 	font-size: 1.5rem;
