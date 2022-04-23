@@ -14,7 +14,7 @@ var month=current.getMonth();
 month=month+1;
 const date=current.getDate();
 //var completeDate= date + "/"+ month +"/"+ year;*/
-var completeDate=current.toLocaleString('en-GB', { timeZone: 'UTC' });
+var completeDate=current.toLocaleString('en-GB', { timeZone: 'Asia/Kolkata'});
 //console.log(completeDate);
 dateElement.innerHTML=completeDate;
 
