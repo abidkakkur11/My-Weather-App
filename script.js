@@ -81,7 +81,7 @@ function displayWeather(){
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
-    humidityElement.innerHTML = `Humidity:${weather.humidity}`;
+    humidityElement.innerHTML = `Humidity: ${weather.humidity}`;
     //pressureElement.innerHTML = `Pressure:${weather.pressure}`;
 }
 

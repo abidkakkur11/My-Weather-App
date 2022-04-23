@@ -15,8 +15,11 @@ body{
 	color: white;
 	font-size: 1.5rem;
 }
+.weather-container{
+	margin-top: -40px;
+}
 .weather-icon{
-	padding: 20px;
+	padding: 10px;
 }
 .weather-icon img{
 	width:150px;
@@ -60,4 +63,11 @@ body{
 }
 .navbar-brand:hover{
 	color:#ffbf00!important;
+}
+.temperature-description p{
+	font-size: 24px;
+	font-weight: 500;
+}
+.temperature-value{
+	font-size: 26px;
 }
