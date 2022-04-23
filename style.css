@@ -56,7 +56,7 @@ body{
 	filter: drop-shadow(8px 5px 4px #a6a6a6);
 }
 .navbar-brand{
-	color:#ffff!important;
+	color:black!important;
 }
 .navbar-brand:hover{
 	color:#ffbf00!important;
