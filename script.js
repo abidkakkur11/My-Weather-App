@@ -14,9 +14,9 @@ var month=current.getMonth();
 month=month+1;
 const date=current.getDate();
 //var completeDate= date + "/"+ month +"/"+ year;*/
-var completeDate=current.toLocaleString('en-GB', { timeZone: 'Asia/Kolkata'});
+var completeTime=current.toLocaleString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'});
 //console.log(completeDate);
-dateElement.innerHTML=completeDate;
+dateElement.innerHTML=completeTime;
 
 
 const weather = {};
