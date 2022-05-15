@@ -14,7 +14,8 @@ var month=current.getMonth();
 month=month+1;
 const date=current.getDate();
 //var completeDate= date + "/"+ month +"/"+ year;*/
-var completeTime=current.toLocaleString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'});
+var today_date=current.toLocaleDateString('en-GB');
+var completeTime=today_date+" "+current.toLocaleString([],{hour: '2-digit', minute: '2-digit'});
 //console.log(completeDate);
 dateElement.innerHTML=completeTime;
 
@@ -57,7 +58,7 @@ function getWeather(latitude, longitude){
     fetch(api)
         .then(function(response){
             let data = response.json();
-            console.log(data);
+            //console.log(data);
             return data;
         })
         .then(function(data){
